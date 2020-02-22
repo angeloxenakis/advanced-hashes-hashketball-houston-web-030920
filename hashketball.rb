@@ -184,14 +184,14 @@ def player_stats(player)
     game_hash[location][:players].each do |player_data|
       if player == player_data[:player_name]
         output = {
-        :number => player_details[:number],
-        :shoe => player_details[:shoe], 
-        :points => player_details[:points],
-        :rebounds => player_details[:rebounds],
-        :assists => player_details[:assists],
-        :steals => player_details[:steals],
-        :blocks => player_details[:blocks],
-        :slam_dunks => player_details[:slam_dunks]
+        :number => player_data[:number],
+        :shoe => player_data[:shoe], 
+        :points => player_data[:points],
+        :rebounds => player_data[:rebounds],
+        :assists => player_data[:assists],
+        :steals => player_data[:steals],
+        :blocks => player_data[:blocks],
+        :slam_dunks => player_data[:slam_dunks]
         }
       end
     end
