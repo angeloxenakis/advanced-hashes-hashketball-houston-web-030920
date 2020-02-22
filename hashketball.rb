@@ -168,17 +168,29 @@ end
 
 def player_numbers(team)
   output = []
-  if team == game_hash[:home][:team_name]
-    game_hash[:home][:players].each do |player_details|
-      output << player_details[:number]
-    end
-  elsif team == game_hash[:away][:team_name]
-    game_hash[:away][:players].each do |player_details|
-      output << player_details[:number]
-    end
+  game_hash.each do |location, team_data|
+    if team == game_hash[location]
+      game_hash[location][:players].each |player_data|
+        output << player_data[:number]
+      end
+    end 
   end 
   output
 end
+
+# def player_numbers(team)
+#   output = []
+#   if team == game_hash[:home][:team_name]
+#     game_hash[:home][:players].each do |player_details|
+#       output << player_details[:number]
+#     end
+#   elsif team == game_hash[:away][:team_name]
+#     game_hash[:away][:players].each do |player_details|
+#       output << player_details[:number]
+#     end
+#   end 
+#   output
+# end
 
 def player_stats(player)
   output = {}
