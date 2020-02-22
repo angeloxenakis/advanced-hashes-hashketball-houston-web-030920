@@ -177,6 +177,7 @@ def player_numbers(team)
   end 
   output
 end
+end
 
 # def player_numbers(team)
 #   output = []
