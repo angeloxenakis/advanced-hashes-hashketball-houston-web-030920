@@ -220,7 +220,7 @@ def most_points_scored
     game_hash[location][:players].each do |player_data|
       if input < player_data[:points]
         input = player_data[:points]
-        ouput = player_data[:player_name]
+        output = player_data[:player_name]
       end
     end 
   end
