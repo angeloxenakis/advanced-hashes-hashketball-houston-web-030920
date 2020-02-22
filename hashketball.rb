@@ -261,7 +261,7 @@ def long_name_steals_a_ton?
   input = game_hash[:away][:players][1][:points]
   output = nil 
   game_hash.each do |location, team_data|
-    game_hash[:location][:players].each do |player_data|
+    game_hash[location][:players].each do |player_data|
       if input < player_data[:steals]
         output = true
       end
