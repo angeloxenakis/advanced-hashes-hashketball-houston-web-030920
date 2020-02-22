@@ -173,9 +173,11 @@ def player_numbers(team)
       game_hash[location][:players].each |player_data|
         output << player_data[:number]
       end
-    end 
-    output
-  end 
+    end
+  end
+  output
+end
+  
 
 # def player_numbers(team)
 #   output = []
