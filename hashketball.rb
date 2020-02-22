@@ -202,20 +202,34 @@ end
 def big_shoe_rebounds
   input = 0
   output = 0
-  game_hash[:home][:players].each do |player_details|
-    if input < player_details[:shoe]
-      input = player_details[:shoe]
-      output = player_details[:rebounds]
-    end
-  end
-  game_hash[:away][:players].each do |player_details|
-    if input < player_details[:shoe]
-      input = player_details[:shoe]
-      output = player_details[:rebounds]
+  game_hash.each do |location, team_data|
+    game_hash[location][:players].each do |player_data|
+      if input < player_data[:shoe]
+        input = player_data[:shoe]
+        output = player_data[:rebounds]
+      end
     end
   end
   output
-end
+end 
+
+# def big_shoe_rebounds
+#   input = 0
+#   output = 0
+#   game_hash[:home][:players].each do |player_details|
+#     if input < player_details[:shoe]
+#       input = player_details[:shoe]
+#       output = player_details[:rebounds]
+#     end
+#   end
+#   game_hash[:away][:players].each do |player_details|
+#     if input < player_details[:shoe]
+#       input = player_details[:shoe]
+#       output = player_details[:rebounds]
+#     end
+#   end
+#   output
+# end
 
 def most_points_scored
   input = 0
