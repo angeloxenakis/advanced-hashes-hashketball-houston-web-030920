@@ -227,24 +227,6 @@ def most_points_scored
   output
 end 
 
-# def most_points_scored
-#   input = 0
-#   output = ""
-#   game_hash[:home][:players].each do |player_details|
-#     if input < player_details[:points]
-#       input = player_details[:points]
-#       output = player_details[:player_name]
-#     end
-#   end
-#   game_hash[:away][:players].each do |player_details|
-#     if input < player_details[:points]
-#       input = player_details[:points]
-#       output = player_details[:player_name]
-#     end
-#   end
-#   output
-# end
-
 def winning_team
   home_input = 0 
   away_input = 0
