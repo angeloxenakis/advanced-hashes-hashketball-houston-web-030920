@@ -174,10 +174,8 @@ def player_numbers(team)
         output << player_data[:number]
       end
     end 
+    output
   end 
-  output
-end
-end
 
 # def player_numbers(team)
 #   output = []
